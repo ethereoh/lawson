@@ -13,7 +13,7 @@ This module is in charge of processing data and transfer it into a database.
 This module is in charge of model servings.
 
 3. lawson RAG
-
+This module is in charge of RAG, which helps 
 
 4. lawson back-end
 
