@@ -1,1 +1,1 @@
-from transformers import AutoTokenizer,  AutoModelForDocumentQuestionAnswering
+from transformers import AutoModelForDocumentQuestionAnswering, AutoTokenizer

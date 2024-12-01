@@ -7,8 +7,8 @@ services:
     volumes:
       - mongodb_data_volume:/data/db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: sY8egQUZ7IRhhTm
+      MONGO_INITDB_ROOT_USERNAME: lawson
+      MONGO_INITDB_ROOT_PASSWORD: lawson
   rabbitmq:
     image: rabbitmq:management
     restart: always
@@ -16,8 +16,8 @@ services:
       - 5672:5672
       - 15672:15672
     environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: lawson
+      RABBITMQ_DEFAULT_PASS: lawson
 volumes:
   mongodb_data_volume:
     external: true
