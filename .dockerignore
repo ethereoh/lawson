@@ -1,0 +1,13 @@
+.git
+.gitignore
+.gitlab-ci.yml
+README.md
+*.pyc
+__pycache__
+.venv
+.pro
+
+docs
+assets
+scripts
+tests
