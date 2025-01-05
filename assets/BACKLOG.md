@@ -36,9 +36,9 @@
 ## AI Inference Endpoints
 
 ### Required
-- [ ] Chat endpoints.
 - [ ] Embed endpoints.
 - [ ] Question_answer endpoints.
+- [ ] Chat endpoints.
 
 ### Additional
 - [ ] Sentiment analysis.

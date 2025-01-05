@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pathlib import Path
 from contextlib import asynccontextmanager
 
-from lawson.api import data_loader
+from lawson.api import doc_loader_routes
 from lawson.core.config import app_settings, settings
 from lawson.common.logging_config import setup_logger
 
@@ -31,4 +31,4 @@ async def hello_word():
     return {"msg": "hello world"}
 
 
-app.include_router(data_loader.router, prefix="")
+app.include_router(doc_loader_routes.router, prefix="")

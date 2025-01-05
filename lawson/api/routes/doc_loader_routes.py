@@ -3,12 +3,13 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException, UploadFile, File
 
 from lawson.services import pdf_parser_service
-from lawson.schemas.law_doc import LawsonResponse
+from lawson.schemas.lawdoc_schemas import DocLoaderResponse
 
 router = APIRouter()
 
 
-@router.post("/inference", status_code=200, response_model=LawsonResponse)
+# TODO: Add basic text splitter methods.
+@router.post("/inference", status_code=200, response_model=DocLoaderResponse)
 async def parsing_pdf_document(file: UploadFile = File(...)):
     """
     Parsing an upload document

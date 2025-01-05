@@ -2,7 +2,7 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 from langchain_core.documents import Document
-from lawson.schemas.base import BaseResponse
+from lawson.schemas.base import BaseResponse, BaseRequest
 
 
 class LawsonFilter(BaseModel):
@@ -12,5 +12,9 @@ class LawsonFilter(BaseModel):
     params: Optional[dict] = None
 
 
-class LawsonResponse(BaseResponse):
+class DocLoaderRequest(BaseRequest):
+    pass
+
+
+class DocLoaderResponse(BaseResponse):
     files: List[Document]

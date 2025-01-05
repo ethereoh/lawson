@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -5,8 +6,10 @@ from pydantic import BaseModel
 
 
 class BaseRequest(BaseModel):
-    pass
+    payload: Optional[str] = None
 
 
 class BaseResponse(BaseModel):
-    pass
+    model_name: Optional[str] = None
+    response_time: Optional[int]  # Measure in seconds
+    total_length: Optional[int]

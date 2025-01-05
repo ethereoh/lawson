@@ -1,0 +1,14 @@
+ai:
+  - embedding: EMBEDDING_SERVICE
+  - doc_loader: DOC_LOADER_SERVICE
+  - qa: QA_SERVICE
+  - keyword: KEYWORDS_SERVICE
+
+
+network: 
+  - message_broker: FLUVIO_NETWORK
+
+
+database: 
+  - vectordb: MILVUS
+  - data_management: MONGODB

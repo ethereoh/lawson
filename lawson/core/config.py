@@ -1,11 +1,14 @@
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+import torch
+
 
 class AppSettings(BaseModel):
     TITLE: str = "Lawson AI"
     PLACEHOLDER: str = "temp"
     VERSION: str = "0.0.0"
+    DEVICE: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 class Settings(BaseSettings):

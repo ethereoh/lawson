@@ -1,23 +1,12 @@
 from typing import List
 
-from pydantic import BaseModel
+from lawson.schemas.base import BaseResponse, BaseRequest
 
 
-class PayloadRequest(BaseModel):
+class KeywordRequest(BaseRequest):
     payload: str
 
 
-class PayloadResponse(BaseModel):
-    model_name: str = None
-    response_time: int  # Measure in seconds
-    total_length: int
-
-
-# Keywords response may differ from QA response
-class QAResponse(PayloadResponse):
-    payload: str
-
-
-class KeywordsResponse(PayloadResponse):
-    payloads: List[str]  # Extracted keywords
+class KeywordsResponse(BaseResponse):
+    payload: List[str]  # Extracted keywords
     conf: List[float]  # Confidence scores

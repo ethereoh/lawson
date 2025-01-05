@@ -1,3 +1,3 @@
-from lawson.api.routes import data_loader
+from lawson.api.routes import doc_loader_routes
 
-__all__ = [data_loader]
+__all__ = [doc_loader_routes]

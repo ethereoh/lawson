@@ -3,7 +3,7 @@ from langchain_text_splitters import (
     CharacterTextSplitter,
 )
 
-from lawson.schemas.law_doc import LawsonResponse
+from lawson.schemas.lawdoc_schemas import LawsonResponse
 
 
 def split_text(

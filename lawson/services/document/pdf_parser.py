@@ -9,7 +9,7 @@ from langchain_community.document_loaders import (
 
 from lawson.core.config import settings
 from lawson.common import setup_logger, get_exception_message
-from lawson.schemas.law_doc import LawsonResponse
+from lawson.schemas.lawdoc_schemas import LawsonResponse
 from lawson.services.base import BaseService
 
 logger = setup_logger(name=settings.LOGGER)
